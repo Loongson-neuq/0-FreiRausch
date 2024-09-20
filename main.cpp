@@ -29,6 +29,13 @@ void CompareThreeNumbers(int a, int b, int c, Result &result)
             swap(a,b);
         }
     }
+    else
+    {
+        if(c<b)
+        {
+            swap(a,c);
+        }
+    }
 
     result.min=a;
     result.mid=b;
