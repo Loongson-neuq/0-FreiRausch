@@ -1,6 +1,6 @@
 #include ".assignment/test.h"
 
-void swap(int x,int y)
+void swap(int &x,int &y)
 {
     int t=x;
     x=y;
@@ -16,6 +16,14 @@ void CompareThreeNumbers(int a, int b, int c, Result &result)
         {
             swap(b,c);
         }
+        if(a>b)
+        {
+            swap(a,b);
+        }
+    }
+    else if(b>c)
+    {
+        swap(b,c);
         if(a>b)
         {
             swap(a,b);
