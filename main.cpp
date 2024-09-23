@@ -1,42 +1,23 @@
 #include ".assignment/test.h"
 
-void swap(int &x,int &y)
-{
-    int t=x;
-    x=y;
-    y=t;
-}
 // 比较三个数的大小
 void CompareThreeNumbers(int a, int b, int c, Result &result)
 {
-    if(a>b)
-    {
-        swap(a,b);
-        if(b>c)
-        {
-            swap(b,c);
-        }
-        if(a>b)
-        {
-            swap(a,b);
-        }
+    if (a > b) {
+        int t = a;
+        a = b;
+        b = t;
     }
-    else if(b>c)
-    {
-        swap(b,c);
-        if(a>b)
-        {
-            swap(a,b);
-        }
+    if (b > c) {
+        int t = b;
+        b = c;
+        c = t;
     }
-    else
-    {
-        if(c<b)
-        {
-            swap(a,c);
-        }
+    if (a > c) {
+        int t = a;
+        a = c;
+        c = t;
     }
-
     result.min=a;
     result.mid=b;
     result.max=c;
